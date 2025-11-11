@@ -53,7 +53,7 @@ They can be written as JSON, YAML, XML files.<br>
 #### <b>2.1. </b> I will initially use JSON for this example.
 
 - Create a <b>fixtures</b> directory inside your app.
-- I added the [sample_product.json](Projects/providing-initial-data-for-models/shop/fixtures/sample_product.json) file to it (feel free to take a look).<br>
+- I added the [sample_product.json](shop/fixtures/sample_product.json) file to it (feel free to take a look).<br>
 (The primary key i used for the sample record is 2, since my first record was provided using data migration)<br>
 - Then call the <b>loaddata</b> command and provide the fixture file name:
 ```
