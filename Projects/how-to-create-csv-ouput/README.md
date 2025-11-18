@@ -30,3 +30,12 @@ Django's <b>HttpResponse</b> class implements write(), so we pass our response t
 
 - If the content you're writing into the file contains characters such as quote or double quotes, there is no need for manually escaping them. (Notice the last item in the second row: Here's a quote.)
 
+### 2. Large CSV outputs
+In case of large csv outputs, it is recommended to ues StreamingHttpResponse.
+This is to avoid load balancers dropping a timed-out connection when server was trying to generate the response.
+
+- I added another view to for this (stream_csv)
+- The client will receive the file chunk by chunk and write them into the disk (as a temp file at first) in the correct order.
+
+### 3. Using django's template system
+This approach will pass a list of items to template and iterate over it to add commas.

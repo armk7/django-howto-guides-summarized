@@ -1,0 +1,4 @@
+Name,Age
+{% for item in data %}
+{{ item.name }}, {{ item.age }}
+{% endfor %}

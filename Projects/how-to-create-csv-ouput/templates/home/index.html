@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'home:download_csv' %}">download csv</a><br>
+    <a href="{% url 'home:stream_csv' %}">download csv (stream)</a><br>
+    <a href="{% url 'home:template_csv' %}">download csv (using template)</a><br>
+    <a href="{% url 'home:template_csv2' %}">download csv (improved)</a><br>
+</body>
+</html>

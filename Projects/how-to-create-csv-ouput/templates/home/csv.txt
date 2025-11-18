@@ -1,0 +1,2 @@
+{% for row in data %}{% for col in row %}"{{ col }}"{% if not forloop.last %},{% endif %}{% endfor %}
+{% endfor %}
