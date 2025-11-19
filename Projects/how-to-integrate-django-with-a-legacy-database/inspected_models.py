@@ -118,4 +118,9 @@ class DjangoSession(models.Model):
         db_table = 'django_session'
 
 
+class ShopProduct(models.Model):
+    title = models.CharField(max_length=60)
 
+    class Meta:
+        managed = False
+        db_table = 'shop_product'
